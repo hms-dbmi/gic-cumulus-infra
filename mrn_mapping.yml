@@ -22,10 +22,6 @@ Resources:
     Type: AWS::S3::Bucket
     Properties:
       BucketName: !Sub '${AWS::AccountId}-cumulus-gic-connector-${EnvironmentType}'
-      # NotificationConfiguration:
-      #   LambdaConfigurations:
-      #     - Event: 's3:ObjectCreated:*'
-      #       Function: !GetAtt PatientIDMapperFunction.Arn
       AccessControl: Private
       PublicAccessBlockConfiguration:
         BlockPublicAcls: true
